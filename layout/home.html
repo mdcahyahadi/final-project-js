@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- boostrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" href= "../images/rose.png" type="image/x-icon">
+    <title>Rosa Florist</title>
+</head>
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+    .heading{
+        text-align: center;
+        font-size: 3rem;
+        padding: 1rem;
+        margin: 2rem 0;
+        background: rgba(255, 51, 153, .1);
+    }
+    .heading span{
+        color: hotpink;
+    }
+    .video-container video{
+        width: 90%;
+        border: .5rem solid #fff;
+        border-radius: .5rem;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 1);
+        object-fit: cover;
+    }
+    .video-container h3{
+        position: absolute;
+        top: 150%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        padding: 1rem 2rem;
+        text-align: center;
+        mix-blend-mode: screen;
+    }
+</style>
+<body>
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+            <img src="../images/rose.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            Rosa Florist
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#home-page">Home</a>
+            <a class="nav-link" href="#about-page">About</a>
+            <a class="nav-link" href="#portfolio-page">Portfolio</a>
+            <a class="nav-link" href="https://www.stylemepretty.com/" target="_blank">Blog</a>
+            <a class="nav-link" href="#contact-page">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- content -->
+        <!-- Home -->
+        <div id="home-page" style="background: url(../images/home-background.jpg); background-position: center; background-size: cover;">
+            <div class="container col-xxl-8 px-4 py-5">
+              <div class="row flex-lg-row-reverse align-items-center g-5 py-4">
+                <div class="col-10 col-sm-8 col-lg-6">
+                  <!-- <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> -->
+                </div>
+                <div class="col-lg-6">
+                  <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-3">Dive into the Rose Garden at Rosa Florist!</h1>
+                  <p class="lead">Calling all rose lovers! <br>
+                    Are you searching for stunning arrangements that capture the timeless beauty and captivating fragrance of roses? 
+                    <br>Look no further than 
+                    <span style="color: hotpink; font-weight:800;">Rosa Florist</span>, 
+                    your one-stop shop for all things rose-related!</p>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" data-bs-toggle="modal" data-bs-target="#pricelistModal">
+                        See Our Pricelist</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="modal fade" id="pricelistModal" tabindex="-1" aria-labelledby="Our Pricelist" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="pricelistModalLabel">Pricelist</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Service</th>
+                            <th scope="col">Price</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                          <tr>
+                            <td>Wedding Bouquet</td>
+                            <td>Start from Rp500.000,00</td>
+                          </tr>
+                          <tr>
+                            <td>Table decoration</td>
+                            <td>Rp750.000,00 - Rp3000.000,00</td>
+                          </tr>
+                          <tr>
+                            <td>Fresh flower</td>
+                            <td>Start from Rp5.000,00/pcs</td>
+                          </tr>
+                          <tr>
+                            <td>Floral Backdrop</td>
+                            <td>Start from Rp4.500.000,00</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                  <p>For further inquires, please contact us.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- About -->
+        <section class="container my-5">
+            <h1 id="about-page" class="heading"><span> about </span> us </h1>
+            <div class="row justify-content-center">
+                <div class="video-container col-md-6">
+                    <video src="../videos/about-us.mp4" autoplay muted loop></video>
+                    <h3>Flower Expert</h3>
+                </div>
+                <div class="content col-md-4">
+                    <h3>Why Choose Us?</h3>
+                    <p>
+                        No cookie-cutter bouquets here! <br>
+                        We personalize every design to match your style and the occasion.
+                        Our skilled florists are artists, not just shopkeepers. 
+                        They create stunning arrangements that capture your emotions and tell your story.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portofolio -->
+        <div id="portfolio-page" class="album py-5 bg-body-tertiary">
+            <h2 class="h1-responsive font-weight-bold text-center">Bespoke Beauty: Custom Floral Creations for Every Need</h2><br>
+            <div class="container">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="../images/card1.jpg" alt="Wedding" height="225" width="100%" class="d-inline-block align-text-top">
+                    <div class="card-body">
+                      <p class="card-text">
+                        Capturing the essence of your love in every petal: 
+                        exquisite wedding bouquets hand-crafted for your happily ever after.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="../images/card2.jpg" alt="Wedding" height="225" width="100%" class="d-inline-block align-text-top">
+                    <div class="card-body">
+                      <p class="card-text">
+                        From birthdays to graduations, our custom floral backdrops add a touch of magic to any occasion.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="../images/card3.jpg" alt="Wedding" height="225" width="100%" class="d-inline-block align-text-top">
+                    <div class="card-body">
+                      <p class="card-text">
+                        Nature's masterpiece, delivered to your doorstep: Order fresh flowers online and bring joy to any space.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Contact -->
+        <section id="contact-page" class="my-4 container">
+            <h2 class="h1-responsive font-weight-bold text-center">Contact Us</h2>
+            <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly.</p>
+            <div class="row">
+                <!--form kiri-->
+                <div class="mx-auto col-md-7 mb-md-0 mb-5">
+                    <form id="contact-form" name="contact-form">
+                        <div class="row">
+                            <!-- nama -->
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <label for="name" class="">Name *</label>
+                                    <input type="text" id="name" name="name" class="form-control must-be-filled" placeholder="your name">
+                                    <div style="display: none; color: red;" id="#not-filled-name">
+                                      Must be filled!
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- email -->
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <label for="email" class="">Email *</label>
+                                    <input type="text" id="email" name="email" class="form-control must-be-filled" placeholder="your email">
+                                </div>
+                                <div style="display: none; color: red;" id="#not-filled-email">
+                                    Must be filled!
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <label for="subject" class="">Subject</label>
+                                    <input type="text" id="subject" name="subject" class="form-control" placeholder="your inquiry subject">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form">
+                                    <label for="message">Message *</label>
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea must-be-filled" placeholder="ask us anything"></textarea>
+                                </div>
+                                <div style="display: none; color: red;" id="#not-filled-message">
+                                    Must be filled!
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+                    <!-- <button class="btn btn-primary" type="button" onclick="">Send</button> -->
+                    <button type="button" class="btn btn-primary" onclick="submit();">Send</button>
+                    <div class="status"></div>
+                </div>
+                <!-- deskripsi kanan -->
+                <div class="col-md-4 ps-5">
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt"></i>  Jl. Ki Penjawi, Salatiga, Indonesia</li>
+                        <li><i class="fas fa-phone mt-4"></i>  +62 1234 4567 897</li>
+                        <li><i class="fas fa-envelope mt-4"></i>  rosa_florist@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+          </section>
+
+    <!-- footer -->
+    <footer class="px-4 d-flex flex-wrap justify-content-between align-items-center py-3 my-2 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <img src="../images/rose.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Rosa Florist, Inc</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-body-secondary" href="https://twitter.com/" target="_blank"><img src="../images/twitter.png" alt="twitter" width="18" height="18"></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://instagram.com/" target="_blank"><img src="../images/instagram.png" alt="instagram" width="20" height="20"></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://facebook.com/" target="_blank"><img src="../images/facebook.png" alt="facebook" width="23" height="23"></a></li>
+      </ul>
+    </footer>
+</body>
+<script>
+    function submit(){
+        let warning = checkWarning();
+        if(warning == "hide"){
+            alert();
+        }
+    }
+    function checkWarning(){
+        let status = "";
+        var inputs = document.querySelectorAll('.must-be-filled');
+        inputs.forEach(function (input) {
+        if(input.value == null || input.value == ""){
+            // warning ditampilin
+            document.getElementById('#not-filled-'+input.id).style.display = 'block';
+            document.getElementById("contact-form").scrollIntoView();
+            status = "show";
+        } else{
+            // warning di hide
+            document.getElementById('#not-filled-'+input.id).style.display = 'none';
+            status = "hide";
+        }
+        });
+        return status;
+    }
+    function alert(){
+        Swal.fire({
+        title: "Sent",
+        text: "Our team will contact you",
+        icon: "success"
+    });
+    }
+</script>
+</html>
